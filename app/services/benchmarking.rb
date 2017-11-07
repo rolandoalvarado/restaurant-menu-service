@@ -6,7 +6,7 @@ module Benchmarking
     yield
     memory_after = `ps -o rss= -p #{Process.pid}`.to_i
 
-    puts "Memory: #{((memory_after - memory_before) / 1024.0).round(2)} MB"
+    Rails.logger.info "Memory: #{((memory_after - memory_before) / 1024.0).round(2)} MB"
   end
 
   def print_time_spent
@@ -14,6 +14,6 @@ module Benchmarking
       yield
     end
 
-    puts "Time: #{time.round(2)}"
+    Rails.logger.info "Time: #{time.round(2)}"
   end
 end
