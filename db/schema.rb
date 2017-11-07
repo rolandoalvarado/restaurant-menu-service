@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20171107055108) do
   enable_extension "plpgsql"
 
   create_table "dishes", force: :cascade do |t|
-    t.integer "actual_dish_id"
     t.string "name", null: false
     t.string "description"
     t.integer "menus_appeared"
@@ -27,40 +26,34 @@ ActiveRecord::Schema.define(version: 20171107055108) do
     t.decimal "highest_price", precision: 32, scale: 16
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["actual_dish_id"], name: "index_dishes_on_actual_dish_id"
   end
 
   create_table "menu_items", force: :cascade do |t|
-    t.integer "actual_menu_item_id"
-    t.integer "actual_menu_page_id"
-    t.integer "actual_dish_id"
+    t.integer "menu_page_id"
+    t.integer "dish_id"
     t.decimal "price", precision: 32, scale: 16
     t.decimal "high_price", precision: 32, scale: 16
-    t.datetime "actual_created_at"
-    t.datetime "actual_updated_at"
+    t.decimal "xpos", precision: 32, scale: 16
+    t.decimal "ypos", precision: 32, scale: 16
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["actual_dish_id"], name: "index_menu_items_on_actual_dish_id"
-    t.index ["actual_menu_item_id"], name: "index_menu_items_on_actual_menu_item_id"
-    t.index ["actual_menu_page_id"], name: "index_menu_items_on_actual_menu_page_id"
+    t.index ["dish_id"], name: "index_menu_items_on_dish_id"
+    t.index ["menu_page_id"], name: "index_menu_items_on_menu_page_id"
   end
 
   create_table "menu_pages", force: :cascade do |t|
-    t.integer "actual_menu_id"
-    t.integer "actual_menu_page_id"
+    t.integer "menu_id"
     t.integer "page_number"
-    t.integer "image_id"
+    t.bigint "image_id"
     t.integer "full_height"
     t.integer "full_width"
-    t.uuid "menu_page_uuid"
+    t.uuid "uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["actual_menu_id"], name: "index_menu_pages_on_actual_menu_id"
-    t.index ["actual_menu_page_id"], name: "index_menu_pages_on_actual_menu_page_id"
+    t.index ["menu_id"], name: "index_menu_pages_on_menu_id"
   end
 
   create_table "menus", force: :cascade do |t|
-    t.integer "actual_menu_id"
     t.string "name"
     t.string "sponsor"
     t.string "event"
@@ -73,6 +66,7 @@ ActiveRecord::Schema.define(version: 20171107055108) do
     t.string "keywords"
     t.string "language"
     t.string "actual_date"
+    t.string "location"
     t.string "location_type"
     t.string "currency"
     t.string "currency_symbol"
@@ -81,7 +75,6 @@ ActiveRecord::Schema.define(version: 20171107055108) do
     t.integer "dish_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["actual_menu_id"], name: "index_menus_on_actual_menu_id"
   end
 
   create_table "users", force: :cascade do |t|

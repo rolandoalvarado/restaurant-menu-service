@@ -1,17 +1,16 @@
+%h4= t('index.upload_note')
 %p= t('index.select_csv')
-
 = form_tag import_files_csv_index_path, multipart: true do
   .form-group
     #csv-type-wrapper
-      = radio_button_tag 'csv_type[]', 'dish', true, id: 'dish'
+      = radio_button_tag 'csv_type[]', 'Dish', true, id: 'dish'
       %label= t('index.dish')
-      = radio_button_tag 'csv_type[]', 'menu', false, id: 'menu'
+      = radio_button_tag 'csv_type[]', 'Menu', false, id: 'menu'
       %label= t('index.menu')
-      = radio_button_tag 'csv_type[]', 'menu-item', false, id: 'menu-item'
-      %label= t('index.menu_item')
-      = radio_button_tag 'csv_type[]', 'menu-page', false, id: 'menu-page'
+      = radio_button_tag 'csv_type[]', 'MenuPage', false, id: 'menu-page'
       %label= t('index.menu_page')
+      = radio_button_tag 'csv_type[]', 'MenuItem', false, id: 'menu-item'
+      %label= t('index.menu_item')
     %label.custom-file
-      %input#file.custom-file-input{required: 'true', type: 'file', accept: 'text/csv'}/
-      %span.custom-file-control
+      = file_field_tag :file, accept: 'text/csv', required: 'true'
     %button#import{type: 'submit', class: 'btn btn-primary'}= t('index.import')

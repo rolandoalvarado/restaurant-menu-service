@@ -1,7 +1,6 @@
 class CreateDishes < ActiveRecord::Migration[5.1]
   def change
     create_table :dishes do |t|
-      t.integer  :actual_dish_id, index: true
       t.string   :name, null: false
       t.string   :description
       t.integer  :menus_appeared

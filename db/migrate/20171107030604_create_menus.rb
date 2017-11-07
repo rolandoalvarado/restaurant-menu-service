@@ -1,7 +1,6 @@
 class CreateMenus < ActiveRecord::Migration[5.1]
   def change
     create_table :menus do |t|
-      t.integer  :actual_menu_id, index: true
       t.string :name
       t.string :sponsor
       t.string :event
@@ -14,6 +13,7 @@ class CreateMenus < ActiveRecord::Migration[5.1]
       t.string :keywords
       t.string :language
       t.string :actual_date
+      t.string :location
       t.string :location_type
       t.string :currency
       t.string :currency_symbol

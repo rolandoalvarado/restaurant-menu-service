@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'activerecord-import'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

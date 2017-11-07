@@ -11,6 +11,7 @@ en:
     instruction: 'to Restaurant Menu Collection Service'
     start_upload: 'Start uploading CSV File now!'
     select_csv: 'Select CSV type to import:'
+    upload_note: 'NOTE: Import order from Dish to Menu Item'
     dish: 'Dish'
     menu: 'Menu'
     menu_item: 'Menu Item'
