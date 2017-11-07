@@ -1,0 +1,27 @@
+class CreateMenus < ActiveRecord::Migration[5.1]
+  def change
+    create_table :menus do |t|
+      t.integer  :actual_menu_id, index: true
+      t.string :name
+      t.string :sponsor
+      t.string :event
+      t.string :venue
+      t.string :place
+      t.string :physical_description
+      t.string :occasion
+      t.string :notes
+      t.string :call_number
+      t.string :keywords
+      t.string :language
+      t.string :actual_date
+      t.string :location_type
+      t.string :currency
+      t.string :currency_symbol
+      t.string :status
+      t.integer :page_count
+      t.integer :dish_count
+
+      t.timestamps null: false
+    end
+  end
+end
