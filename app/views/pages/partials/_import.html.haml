@@ -1,17 +1,17 @@
-%p Select CSV type to import:
+%p= t('index.select_csv')
 
 = form_tag import_files_csv_index_path, multipart: true do
   .form-group
     #csv-type-wrapper
       = radio_button_tag 'csv_type[]', 'dish', true, id: 'dish'
-      %label='Dish'
+      %label= t('index.dish')
       = radio_button_tag 'csv_type[]', 'menu', false, id: 'menu'
-      %label='Menu'
+      %label= t('index.menu')
       = radio_button_tag 'csv_type[]', 'menu-item', false, id: 'menu-item'
-      %label='Menu Item'
+      %label= t('index.menu_item')
       = radio_button_tag 'csv_type[]', 'menu-page', false, id: 'menu-page'
-      %label='Menu Page'
+      %label= t('index.menu_page')
     %label.custom-file
       %input#file.custom-file-input{required: 'true', type: 'file', accept: 'text/csv'}/
       %span.custom-file-control
-    %button#import{type: 'submit', class: 'btn btn-primary'}= 'Import'
+    %button#import{type: 'submit', class: 'btn btn-primary'}= t('index.import')

@@ -2,8 +2,8 @@
   .jumbotron
     .container
       - if current_user
-        %h3 Start uploading CSV File now!
+        %h3= t('index.start_upload')
         = render 'pages/partials/import'
       - else
-        %h1 Welcome!
-        %h3 to Restaurant Menu Collection Service
+        %h1= t('index.greeting')
+        %h3= t('index.instruction')
