@@ -1,0 +1,17 @@
+%p Select CSV type to import:
+
+= form_tag import_files_csv_index_path, multipart: true do
+  .form-group
+    #csv-type-wrapper
+      = radio_button_tag 'csv_type[]', 'dish', true, id: 'dish'
+      %label='Dish'
+      = radio_button_tag 'csv_type[]', 'menu', false, id: 'menu'
+      %label='Menu'
+      = radio_button_tag 'csv_type[]', 'menu-item', false, id: 'menu-item'
+      %label='Menu Item'
+      = radio_button_tag 'csv_type[]', 'menu-page', false, id: 'menu-page'
+      %label='Menu Page'
+    %label.custom-file
+      %input#file.custom-file-input{required: 'true', type: 'file', accept: 'text/csv'}/
+      %span.custom-file-control
+    %button#import{type: 'submit', class: 'btn btn-primary'}= 'Import'

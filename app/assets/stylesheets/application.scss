@@ -18,5 +18,33 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+$global-blue: #00ADF0;
+$global-green: #BAD16E;
+$global-dark-grey: #808080;
+$dark-bg: #F2F2F2;
+$color-header: #909090;
+$color-body: #494949;
+$global-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $global-font;
+}
+
 .alert-alert { @extend .alert-warning; }
 .alert-notice { @extend .alert-info; }
+
+#csv-type-wrapper {
+  width: 500px;
+  display: inline-block;
+
+  input[type='radio'] {
+    with: 100%;
+    max-width: 100px;
+    padding: 10px 10px;
+  }
+
+  label {
+    padding: 10px 10px;
+  }
+}
+
