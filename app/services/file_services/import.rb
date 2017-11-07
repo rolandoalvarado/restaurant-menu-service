@@ -53,7 +53,7 @@ module FileServices
               row_hash = row.to_h
               case csv_type
               when 'Dish'
-                rows << assign_hash(row_hash) if row_hash['id'] && row_hash['name'].present?
+                rows << assign_hash(row_hash) if row_hash['id'].present? && row_hash['name'].present?
               when 'Menu'
                 unless row_hash['id'].nil? && row_hash['sponsor'].nil? &&
                   row_hash['event'].nil? && row_hash['venue'].nil? && row_hash['place'].nil?
@@ -61,13 +61,11 @@ module FileServices
                 end
               when 'MenuItem'
                 unless row_hash['id'].nil? && row_hash['menu_page_id'].nil? &&
-                row_hash['dish_id'].nil? && row_hash['price'].nil?
+                  row_hash['dish_id'].nil? && row_hash['price'].nil?
                   rows << assign_hash(row_hash)
                 end
               when 'MenuPage'
-                unless row_hash['id'].nil? && row_hash['menu_id'].nil?
-                  rows << assign_hash(row_hash)
-                end
+                rows << assign_hash(row_hash) if row_hash['id'].present? && row_hash['menu_id'].present?
               else
                 return { status: :unprocessable_entity, message: INVALID_CSV_TYPE }
               end
