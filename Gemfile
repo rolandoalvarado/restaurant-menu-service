@@ -23,6 +23,7 @@ gem 'activerecord-import'
 gem 'jquery-datatables-rails'
 gem 'ajax-datatables-rails'
 gem 'font-awesome-rails'
+gem 'chosen-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

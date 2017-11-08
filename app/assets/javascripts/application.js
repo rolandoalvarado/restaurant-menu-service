@@ -14,12 +14,13 @@
 //= require turbolinks
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery-ui
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap/dropdown
-//= require turbolinks
+//= require jquery-ui
 //= require dataTables/jquery.dataTables
+//= require chosen-jquery
 //= require utils
 //= require menu_events
+//= require turbolinks
 //= require_tree .

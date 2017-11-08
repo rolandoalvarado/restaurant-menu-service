@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :files do
     resources :csv do
       collection { post :import }
+      collection { post :export }
     end
   end
 

@@ -1,9 +1,9 @@
 en:
   header:
-    title: 'Restaurant Menu'
+    title: 'Restaurant Menu Service'
   navigation:
     home: 'Home'
-    menu: 'Menus'
+    menu: 'Menu Listing'
     profile: 'Profile'
     logout: 'Logout'
     login: 'Login'
@@ -19,8 +19,9 @@ en:
     menu_item: 'Menu Item'
     menu_page: 'Menu Page'
     import: 'Import'
+    export: 'Export'
   menus:
-    title: 'Menu List'
+    title: 'Menu Listing'
     details: 'Menu Details'
     id: 'ID'
     sponsor: 'Sponsor'
@@ -37,7 +38,7 @@ en:
     date: 'Date'
     location_type: 'Location Type'
     status: 'Status'
-    process_import: 'Please wait... while we are processing your csv file.'
+    process_import: 'Please wait... while we are processing your request.'
     export_title: 'Select Place and Date to export:'
   currency: 'Currency'
   currency_symbol: 'Currency Symbol'

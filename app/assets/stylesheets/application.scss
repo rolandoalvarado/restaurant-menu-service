@@ -12,6 +12,7 @@
  *
  *= require dataTables/jquery.dataTables
  *= require jquery-ui
+ *= require chosen
  *= require custom
  *= require_tree .
  *= require_self
@@ -34,3 +35,4 @@ body { font-family: $global-font; }
 
 .alert-alert { @extend .alert-warning; }
 .alert-notice { @extend .alert-info; }
+.alert-error { @extend .alert-danger; }

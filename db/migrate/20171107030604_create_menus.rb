@@ -2,10 +2,10 @@ class CreateMenus < ActiveRecord::Migration[5.1]
   def change
     create_table :menus do |t|
       t.string :name
-      t.string :sponsor
+      t.string :sponsor, index: true
       t.string :event
       t.string :venue
-      t.string :place
+      t.string :place, index: true
       t.string :physical_description
       t.string :occasion
       t.string :notes

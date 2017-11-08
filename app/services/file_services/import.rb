@@ -56,12 +56,13 @@ module FileServices
                 rows << assign_hash(row_hash) if row_hash['id'].present? && row_hash['name'].present?
               when 'Menu'
                 unless row_hash['id'].nil? && row_hash['sponsor'].nil? &&
-                  row_hash['event'].nil? && row_hash['venue'].nil? && row_hash['place'].nil?
+                       row_hash['event'].nil? && row_hash['venue'].nil? &&
+                       row_hash['place'].nil?
                   rows << assign_hash(row_hash)
                 end
               when 'MenuItem'
                 unless row_hash['id'].nil? && row_hash['menu_page_id'].nil? &&
-                  row_hash['dish_id'].nil? && row_hash['price'].nil?
+                       row_hash['dish_id'].nil? && row_hash['price'].nil?
                   rows << assign_hash(row_hash)
                 end
               when 'MenuPage'

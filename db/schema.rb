@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 20171107055108) do
     t.integer "dish_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["place"], name: "index_menus_on_place"
+    t.index ["sponsor"], name: "index_menus_on_sponsor"
   end
 
   create_table "users", force: :cascade do |t|
