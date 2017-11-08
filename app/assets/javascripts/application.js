@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require jquery
 //= require jquery.turbolinks
+//= require jquery-ui
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap/dropdown

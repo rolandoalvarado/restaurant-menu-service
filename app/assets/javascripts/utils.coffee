@@ -14,6 +14,10 @@ jQuery ->
           'previous': '<i class="fa fa-angle-left"></i>'
           'next': '<i class="fa fa-angle-right"></i>'
 
+    setupDatePicker: (inputClass) ->
+      $('.'+inputClass).datepicker($.datepicker.regional['en'])
+      $('.'+inputClass).datepicker('option','dateFormat','yy-mm-dd')
+
     enableObject: (buttonId) ->
       $('#'+buttonId).removeAttr('disabled')
 

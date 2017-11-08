@@ -2,6 +2,7 @@ jQuery ->
   $(document).ready ->
     Utils.setupDatatable('table-basic')
     Utils.disableObject('import')
+    Utils.setupDatePicker('datepicker')
 
   $(document).on 'click', '#import', ->
     Utils.showProcessModal('modal-window')

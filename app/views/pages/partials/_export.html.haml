@@ -1,0 +1,11 @@
+%p= t('menus.export_title')
+#export-wrapper
+  .details-text-wide
+    %label.control-label= t('place')
+    %input#place{name: 'place', type: 'text'}
+  .details-text-wide
+    %label.control-label= t('from')
+    %input.datepicker#from{name: 'from', type: 'text'}
+  .details-text-wide
+    %label.control-label= t('to')
+    %input.datepicker#to{name: 'to', type: 'text'}

@@ -4,6 +4,9 @@
       - if current_user
         %h3= t('index.start_upload')
         = render 'pages/partials/import'
+        %hr
+        %h3= t('index.start_export')
+        = render 'pages/partials/export'
       - else
         %h1= t('index.greeting')
         %h3= t('index.instruction')

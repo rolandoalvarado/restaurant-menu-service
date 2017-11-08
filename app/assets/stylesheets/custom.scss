@@ -1,0 +1,49 @@
+#csv-type-wrapper {
+  width: 500px;
+  display: inline-block;
+
+  input[type='radio'] {
+    with: 100%;
+    max-width: 100px;
+    padding: 10px 10px;
+  }
+
+  label {
+    padding: 10px 10px;
+  }
+}
+
+#table-wrapper { width: auto; }
+#export-wrapper { 
+  width: auto;
+  max-width: 500px;
+  height: 150px;
+  display: inline;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  .details-text-wide {
+    width: 200px;
+    display: inline-block;
+    padding-bottom: 10px;
+
+    label {
+      float: left;
+      padding-right: 8px;
+      padding-top: 5px;
+      width: 100%;
+      max-width: 50px;
+    }
+  }
+}
+
+#modal-window { min-height: 200px; min-width: 300px; }
+.modal-dialog {
+  vertical-align: middle;
+  min-width: 60%;
+  display:table;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 40%; 
+}

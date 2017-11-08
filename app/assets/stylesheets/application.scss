@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require dataTables/jquery.dataTables
+ *= require jquery-ui
+ *= require custom
  *= require_tree .
  *= require_self
  */
@@ -28,40 +30,7 @@ $color-header: #909090;
 $color-body: #494949;
 $global-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-body {
-  font-family: $global-font;
-}
+body { font-family: $global-font; }
 
 .alert-alert { @extend .alert-warning; }
 .alert-notice { @extend .alert-info; }
-
-#csv-type-wrapper {
-  width: 500px;
-  display: inline-block;
-
-  input[type='radio'] {
-    with: 100%;
-    max-width: 100px;
-    padding: 10px 10px;
-  }
-
-  label {
-    padding: 10px 10px;
-  }
-}
-
-#table-wrapper { width: auto; }
-#modal-window.processing-modal-only {
-  min-height: 200px;
-  min-width: 300px;
-}
-
-.modal-dialog {
-  vertical-align: middle;
-  min-width: 60%;
-  display:table;
-  position: absolute;
-  left: 0;
-  right:0;
-  top: 40%; 
-}
