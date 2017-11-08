@@ -16,6 +16,6 @@ module Benchmarking
       yield
     end
 
-    Rails.logger.info "Time Spent: #{time.round(2)}"
+    Rails.logger.info "Time Spent: #{time.round(2)} seconds"
   end
 end

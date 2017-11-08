@@ -21,6 +21,6 @@
         %td= menu.place
         %td= menu.location
         %td= menu.call_number
-        %td= "#{Time.parse(menu.actual_date.to_s).strftime('%b %d, %Y (%A)')}(#{Time.parse(menu.actual_date.to_s).strftime('%I:%M %p')})"
+        %td= menu.date
         %td= menu.status
         %td= link_to t('view'), menu_path(menu), class: 'btn btn-primary'

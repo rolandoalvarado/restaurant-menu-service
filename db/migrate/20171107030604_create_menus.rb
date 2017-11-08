@@ -12,7 +12,7 @@ class CreateMenus < ActiveRecord::Migration[5.1]
       t.string :call_number
       t.string :keywords
       t.string :language
-      t.string :actual_date
+      t.string :date
       t.string :location
       t.string :location_type
       t.string :currency

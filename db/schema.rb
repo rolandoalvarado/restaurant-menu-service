@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20171107055108) do
     t.string "call_number"
     t.string "keywords"
     t.string "language"
-    t.string "actual_date"
+    t.string "date"
     t.string "location"
     t.string "location_type"
     t.string "currency"
