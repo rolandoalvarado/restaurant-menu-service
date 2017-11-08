@@ -16,7 +16,11 @@ module Files
       else
         flash[:notice] = result[:message]
         send_data result[:data].to_json, type: 'application/json; charset=UTF-8;',
-                                         disposition: 'attachment; filename=menus.json'
+                                         disposition: 'attachment',
+                                         filename: 'menus.json'
+        #send_file(result[:data].to_json, filename: 'menu-listing.json',
+        #                                 type: 'application/json; charset=UTF-8;',
+        #                                 disposition: 'inline')
       end
     end
   end

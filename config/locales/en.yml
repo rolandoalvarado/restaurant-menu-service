@@ -40,6 +40,10 @@ en:
     status: 'Status'
     process_import: 'Please wait... while we are processing your request.'
     export_title: 'Select Place and Date to export:'
+  errors:
+    page_not_found: 'Page your are looking for is not found!'
+    internal_server: 'An error occured while navigating the site.'
+    no_permission: 'You do not have permission to perform such action.'
   currency: 'Currency'
   currency_symbol: 'Currency Symbol'
   page_count: 'Page Count'

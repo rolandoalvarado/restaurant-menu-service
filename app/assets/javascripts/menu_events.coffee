@@ -15,6 +15,9 @@ jQuery ->
   $(document).on 'click', '.dropdown-toggle', ->
     Utils.setupDropdown($(this).attr('class'))
 
+  $(document).on 'click', '#place', ->
+    Utils.setupChosenSelect($(this).attr('id'))
+
   $(document).on 'click', '.datepicker', ->
     Utils.setupDatePicker($(this).attr('class'))
 

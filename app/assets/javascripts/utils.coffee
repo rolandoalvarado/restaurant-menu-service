@@ -4,7 +4,7 @@ jQuery ->
 
     exportData: (buttonId) ->
       $.ajax '/files/csv/export',
-      type: 'POST'
+      type: 'GET'
       dataType: 'text'
       data:
         place: $('select#place :selected').text()
