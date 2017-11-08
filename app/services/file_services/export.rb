@@ -3,7 +3,7 @@
 module FileServices
   class Export
     SUCCESSFUL_EXPORT = 'File has been exported successfully.'
-    INVALID_DATE_FROM = 'Date From is invalid!'
+    INVALID_DATE_FROM = 'Date is invalid!'
 
     def initialize(attrs)
       @attrs = attrs

@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :password, confirmation: true
+
   def full_name
     "#{first_name} #{last_name}".strip
   end

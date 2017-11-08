@@ -29,10 +29,24 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+end
+
+group :test do
   gem 'guard'
-  gem 'faker'
   gem 'rubocop', require: false
   gem 'guard-rubocop'
+  gem 'mocha', require: false
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'guard-rspec', require: false
+  gem 'parallel_tests'
+  gem 'database_cleaner'
+  gem 'webmock'
+  gem 'factory_bot_rails'
+  gem 'json_expressions'
+  gem 'simplecov', :require => false
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
+  gem 'faker'
 end
 
 group :development do
