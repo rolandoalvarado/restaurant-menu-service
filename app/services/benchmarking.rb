@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark'
 
 module Benchmarking
@@ -6,7 +8,7 @@ module Benchmarking
     yield
     memory_after = `ps -o rss= -p #{Process.pid}`.to_i
 
-    Rails.logger.info "Memory: #{((memory_after - memory_before) / 1024.0).round(2)} MB"
+    Rails.logger.info "Memory Usage: #{((memory_after - memory_before) / 1024.0).round(2)} MB"
   end
 
   def print_time_spent
@@ -14,6 +16,6 @@ module Benchmarking
       yield
     end
 
-    Rails.logger.info "Time: #{time.round(2)}"
+    Rails.logger.info "Time Spent: #{time.round(2)}"
   end
 end

@@ -36,6 +36,7 @@ en:
     date: 'Date'
     location_type: 'Location Type'
     status: 'Status'
+    process_import: 'Please wait... while importing your csv file.'
   currency: 'Currency'
   currency_symbol: 'Currency Symbol'
   page_count: 'Page Count'

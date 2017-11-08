@@ -93,6 +93,8 @@ GEM
     ffi (1.9.18-java)
     ffi (1.9.18-x64-mingw32)
     ffi (1.9.18-x86-mingw32)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -308,6 +310,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   faker
+  font-awesome-rails
   guard
   guard-rubocop
   haml-rails

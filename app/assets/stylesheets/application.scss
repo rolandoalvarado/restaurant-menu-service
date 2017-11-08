@@ -18,6 +18,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'font-awesome';
 
 $global-blue: #00ADF0;
 $global-green: #BAD16E;
@@ -49,3 +50,17 @@ body {
   }
 }
 
+#modal-window.processing-modal-only {
+  min-height: 200px;
+  min-width: 300px;
+}
+
+.modal-dialog {
+  vertical-align: middle;
+  min-width: 60%;
+  display:table;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 40%; 
+}
