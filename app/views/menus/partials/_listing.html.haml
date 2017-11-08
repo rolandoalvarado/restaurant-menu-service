@@ -1,0 +1,26 @@
+%table#table-basic.table.table-hover.text-left.contacts-table
+  %thead
+    %tr
+      %th= t('menus.id')
+      %th= t('menus.sponsor')
+      %th= t('menus.event')
+      %th= t('menus.venue')
+      %th= t('menus.place')
+      %th= t('menus.location')
+      %th= t('menus.phone')
+      %th= t('menus.date')
+      %th= t('menus.status')
+      %th= t('action')
+  %tbody
+    - @menus.each do |menu|
+      %tr
+        %td= menu.id
+        %td= menu.sponsor
+        %td= link_to menu.event, menu_path(menu), class: 'btn btn-link'
+        %td= link_to menu.venue, menu_path(menu), class: 'btn btn-link'
+        %td= menu.place
+        %td= menu.location
+        %td= menu.call_number
+        %td= "#{Time.parse(menu.actual_date.to_s).strftime('%b %d, %Y (%A)')}(#{Time.parse(menu.actual_date.to_s).strftime('%I:%M %p')})"
+        %td= menu.status
+        %td= link_to t('view'), menu_path(menu), class: 'btn btn-primary'

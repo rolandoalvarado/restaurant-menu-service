@@ -17,4 +17,7 @@
 //= require jquery_ujs
 //= require bootstrap/dropdown
 //= require turbolinks
+//= require dataTables/jquery.dataTables
+//= require utils
+//= require menu_events
 //= require_tree .

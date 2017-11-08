@@ -19,6 +19,8 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'activerecord-import'
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

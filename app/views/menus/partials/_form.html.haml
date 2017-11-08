@@ -1,0 +1,37 @@
+%form
+  .form-group
+    %label{:for => 'id'}= t('menus.id')
+    %label.id= @menu.id
+  .form-group
+    %label{:for => 'sponsor'}= t('menus.sponsor')
+    %input#sponsor.form-control{placeholder: 'Sponsor', type: 'text', disabled: true, value: @menu.sponsor}/
+  .form-group
+    %label{:for => 'event'}= t('menus.event')
+    %input#event.form-control{placeholder: 'Event', type: 'text', disabled: true, value: @menu.event}/
+  .form-group
+    %label{:for => 'venue'}= t('menus.venue')
+    %input#venue.form-control{placeholder: 'Venue', type: 'text', disabled: true, value: @menu.venue}/
+  .form-group
+    %label{:for => 'place'}= t('menus.place')
+    %input#place.form-control{placeholder: 'Place', type: 'text', disabled: true, value: @menu.place}/
+  .form-group
+    %label{:for => 'physical_description'}= t('menus.physical_description')
+    %input#physical-description.form-control{placeholder: 'Physical Description', type: 'text', disabled: true, value: @menu.physical_description}/
+  .form-group
+    %label{:for => 'occasion'}= t('menus.occasion')
+    %input#occasion.form-control{placeholder: 'Occasion', type: 'text', disabled: true, value: @menu.occasion}/
+  .form-group
+    %label{:for => 'notes'}= t('menus.notes')
+    %input#notes.form-control{placeholder: 'Notes', type: 'text', disabled: true, value: @menu.notes}/
+  .form-group
+    %label{:for => 'call_number'}= t('menus.call_number')
+    %input#call_number.form-control{placeholder: 'Call Number', type: 'text', disabled: true, value: @menu.call_number}/
+  .form-group
+    %label{:for => 'location'}= t('menus.location')
+    %input#location.form-control{placeholder: 'Location', type: 'text', disabled: true, value: @menu.location}/
+  .form-group
+    %label{:for => 'actual_date'}= t('menus.actual_date')
+    %input#actual_date.form-control{placeholder: 'Date', type: 'text', disabled: true, value: @menu.actual_date}/
+  .form-group
+    %label{:for => 'status'}= t('menus.status')
+    %input#status.form-control{placeholder: 'Status', type: 'text', disabled: true, value: @menu.status}/
