@@ -16,5 +16,9 @@ RSpec.describe MenuPage, type: :model do
     context 'presence' do
       it { expect(menu_page).to validate_presence_of(:menu_id) }
     end
+
+    context 'format' do
+      it { expect(menu_page).to_not allow_value(nil).for(:menu_id) }
+    end
   end
 end

@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
 
+  devise_scope :user do
+    get '/users/sign_in' => 'devise/sessions#new', as: :signin
+    get '/users/sign_out' => 'devise/sessions#destroy', as: :signout
+  end
+
   namespace :files do
     resources :csv do
       collection { post :import }

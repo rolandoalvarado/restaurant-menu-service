@@ -67,8 +67,6 @@ module FileServices
                 end
               when 'MenuPage'
                 rows << assign_hash(row_hash) if row_hash['id'].present? && row_hash['menu_id'].present?
-              else
-                return { status: :unprocessable_entity, message: INVALID_CSV_TYPE }
               end
             end
           end

@@ -13,7 +13,11 @@ RSpec.describe Dish, type: :model do
     end
 
     context 'presence' do
-      it { should validate_presence_of(:name) }
+      it { expect(dish).to validate_presence_of(:name) }
+    end
+
+    context 'format' do
+      it { expect(dish).to_not allow_value(nil).for(:name) }
     end
   end
 end

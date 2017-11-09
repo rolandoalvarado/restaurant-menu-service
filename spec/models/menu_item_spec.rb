@@ -20,5 +20,10 @@ RSpec.describe MenuItem, type: :model do
       it { expect(menu_item).to validate_presence_of(:menu_page_id) }
       it { expect(menu_item).to validate_presence_of(:dish_id) }
     end
+
+    context 'format' do
+      it { expect(menu_item).to_not allow_value(nil).for(:menu_page_id) }
+      it { expect(menu_item).to_not allow_value(nil).for(:dish_id) }
+    end
   end
 end

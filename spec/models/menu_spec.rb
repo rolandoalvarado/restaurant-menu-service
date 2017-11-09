@@ -13,10 +13,17 @@ RSpec.describe Menu, type: :model do
     end
 
     context 'presence' do
-      it { should validate_presence_of(:sponsor) }
-      it { should validate_presence_of(:event) }
-      it { should validate_presence_of(:venue) }
-      it { should validate_presence_of(:place) }
+      it { expect(menu).to validate_presence_of(:sponsor) }
+      it { expect(menu).to validate_presence_of(:event) }
+      it { expect(menu).to validate_presence_of(:venue) }
+      it { expect(menu).to validate_presence_of(:place) }
+    end
+
+    context 'format' do
+      it { expect(menu).to_not allow_value(nil).for(:sponsor) }
+      it { expect(menu).to_not allow_value(nil).for(:event) }
+      it { expect(menu).to_not allow_value(nil).for(:venue) }
+      it { expect(menu).to_not allow_value(nil).for(:place) }
     end
   end
 end

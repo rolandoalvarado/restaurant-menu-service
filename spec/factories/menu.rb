@@ -11,7 +11,7 @@ FactoryBot.define do
     call_number Faker::PhoneNumber.phone_number
     keywords nil
     language nil
-    date Faker::Date
+    date Time.zone.now
     location Faker::Address.street_address
     location_type nil
     currency 'Dollars'
