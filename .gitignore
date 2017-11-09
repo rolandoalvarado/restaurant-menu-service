@@ -14,6 +14,9 @@
 !/tmp/.keep
 /coverage
 
+# Ignore configuration
+/config/database.yml
+
 /node_modules
 /yarn-error.log
 
