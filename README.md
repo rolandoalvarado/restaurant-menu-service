@@ -3,7 +3,7 @@
 ## Requirements
 
 - Ruby 2.3.1
-- Rails 5.14
+- Rails 5.1.4
 - PostgreSQL 9.5.4
 - Bootstrap
 - Jquery-ui
