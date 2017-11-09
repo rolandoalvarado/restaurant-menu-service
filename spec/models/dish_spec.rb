@@ -9,7 +9,7 @@ RSpec.describe Dish, type: :model do
 
   describe 'validations' do
     context 'model dependencies' do
-      it { should have_many(:menu_items).dependent(:destroy) }
+      it { expect(dish).to have_many(:menu_items).dependent(:destroy) }
     end
 
     context 'presence' do

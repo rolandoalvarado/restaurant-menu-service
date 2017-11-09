@@ -38,12 +38,9 @@ group :test do
   gem 'mocha', require: false
   gem 'rspec-rails', '~> 3.5.0'
   gem 'guard-rspec', require: false
-  gem 'parallel_tests'
   gem 'database_cleaner'
   gem 'webmock'
   gem 'factory_bot_rails'
-  gem 'json_expressions'
-  gem 'simplecov', :require => false
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 2.0'
   gem 'faker'
